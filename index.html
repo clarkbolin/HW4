@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Joe's Hot Dogs</title>
+</head>
+
+<body>
+    <h1>Welcome to Joe's Online Hot Dog Stand!</h1>
+    <h2>Your Order:</h2>
+    <script language="javascript">
+        var num_dogs = prompt("How many hot dogs do you want? $4.25 each")
+        var num_fries = prompt("How many french fries do you want? $2.60 each")
+        var num_sodas = prompt("How many sodas do you want? $1.50 each")
+        var total = (num_dogs * 4.25) + (num_fries * 2.60) + (num_sodas * 1.50)
+        document.write("Hot Dogs: " + num_dogs + "<br/> French Fries: " + num_fries + "<br/> Sodas: " +  num_sodas)
+        document.write("<br/><br/>Subtotal: " + total.toFixed(2) + "<br/>")
+        if (total >= 20) {
+            var discount = total * 0.1
+            total = total * 0.9
+            document.write("Discount: " + discount.toFixed(2) + "<br/>")
+        }
+        var tax = total * 0.0625
+        document.write("Tax: " + tax.toFixed(2))
+        document.write("<br/><br/> Final Total: " + total.toFixed(2))
+    </script>
+</body>
